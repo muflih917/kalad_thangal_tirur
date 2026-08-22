@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>കലാദ് തങ്ങൾ തിരൂർ | ഡോക്ടർ - തിരൂർ, കേരളം</title>
+    <meta name="description" content="കലാദ് തങ്ങൾ തിരൂർ - തിരൂരിലെ വിശ്വസ്ത ഡോക്ടർ. 5.0 റേറ്റിംഗ്. ശനി-വ്യാഴം 10:30 AM - 5:30 PM. പള്ളിപ്പടി പരിപ്പാടം റോഡ്, തിരൂർ." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚕️</text></svg>" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+    <!-- ==================== PRELOADER ==================== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <i class="fas fa-stethoscope"></i>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-word">കലാദ്</span>
+                <span class="preloader-space"></span>
+                <span class="preloader-word">തങ്ങൾ</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SCROLL PROGRESS BAR ==================== -->
+    <div id="scroll-progress">
+        <div id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-stethoscope"></i></span>
+                <span class="logo-text">
+                    <span class="logo-name">കലാദ് തങ്ങൾ</span>
+                    <span class="logo-sub">തിരൂർ</span>
+                </span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link active">ഹോം</a></li>
+                <li><a href="#about" class="nav-link">ഞങ്ങളെക്കുറിച്ച്</a></li>
+                <li><a href="#services" class="nav-link">സേവനങ്ങൾ</a></li>
+                <li><a href="#schedule" class="nav-link">സമയക്രമം</a></li>
+                <li><a href="#faq" class="nav-link">ചോദ്യങ്ങൾ</a></li>
+                <li><a href="#location" class="nav-link">സ്ഥലം</a></li>
+                <li><a href="#contact" class="nav-link">ബന്ധപ്പെടുക</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#contact" class="btn btn-nav">ബുക്ക് ചെയ്യുക</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero">
+        <!-- Three.js Canvas Background -->
+        <canvas id="three-canvas"></canvas>
+        <div class="hero-overlay"></div>
+
+        <!-- Floating decorative elements -->
+        <div class="hero-float-shape shape-1"></div>
+        <div class="hero-float-shape shape-2"></div>
+        <div class="hero-float-shape shape-3"></div>
+        <div class="hero-float-shape shape-4"></div>
+
+        <div class="hero-container">
+            <div class="hero-badge animate-fade-up">
+                <span class="badge-dot"></span>
+                <span>ഞങ്ങളുടെ ക്ലിനിക്കിലേക്ക് സ്വാഗതം</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-greeting animate-slide-down">
+                    Dr. Kalad Thangal
+                    <span class="malayalam-name">ഡോ. കലാദ് തങ്ങൾ</span>
+                </span>
+            </h1>
+
+            <p class="hero-subtitle animate-fade-up">
+                കരുതലോടെയും മികവോടെയും ആരോഗ്യ സേവനം. തിരൂർ സമൂഹത്തിന് സമർപ്പണത്തോടെയും വ്യക്തിഗത ശ്രദ്ധയോടെയും.
+                <span class="hero-welcome-ml">എല്ലാ മതസ്ഥർക്കും സ്വാഗതം</span>
+            </p>
+
+            <div class="hero-rating animate-fade-up">
+                <span class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="rating-score">5.0</span>
+                <span class="rating-divider">|</span>
+                <span class="rating-reviews">2 റിവ്യൂകൾ</span>
+            </div>
+
+            <div class="hero-buttons animate-fade-up">
+                <a href="#schedule" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> സമയക്രമം കാണുക
+                </a>
+                <a href="#location" class="btn btn-outline">
+                    <i class="fas fa-map-marker-alt"></i> വഴി കാണുക
+                </a>
+            </div>
+
+            <div class="hero-info-cards animate-fade-up">
+                <div class="hero-info-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="info-label">പ്രവൃത്തി സമയം</span>
+                        <span class="info-value">10:30 AM - 5:30 PM</span>
+                    </div>
+                </div>
+                <div class="hero-info-card">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <span class="info-label">സ്ഥലം</span>
+                        <span class="info-value">തിരൂർ, കേരളം</span>
+                    </div>
+                </div>
+                <div class="hero-info-card">
+                    <i class="fas fa-train"></i>
+                    <div>
+                        <span class="info-label">അടുത്ത സ്റ്റേഷൻ</span>
+                        <span class="info-value">താനൂർ (2.88 km)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator animate-fade-up">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">താഴേക്ക് സ്ക്രോൾ ചെയ്യുക</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">ഞങ്ങളെക്കുറിച്ച്</span>
+                <h2 class="section-title">നിങ്ങളുടെ <span class="gradient-text">വിശ്വസ്ത ആരോഗ്യ പങ്കാളി</span></h2>
+                <p class="section-subtitle">വ്യക്തിഗത ശ്രദ്ധയോടെ മികച്ച ചികിത്സ നൽകാൻ സമർപ്പിതം</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-placeholder">
+                            <i class="fas fa-user-doctor"></i>
+                            <span>ഡോ. കലാദ് തങ്ങൾ</span>
+                        </div>
+                        <div class="about-image-ring"></div>
+                        <div class="about-float-badge">
+                            <i class="fas fa-award"></i>
+                            <span>5.0 റേറ്റിംഗ്</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content reveal-right">
+                    <h3>കലാദ് തങ്ങൾ തിരൂരിലേക്ക് സ്വാഗതം</h3>
+                    <p class="about-text">
+                        കേരളത്തിലെ തിരൂരിന്റെ ഹൃദയഭാഗത്ത് സ്ഥിതി ചെയ്യുന്ന ഡോ. കലാദ് തങ്ങൾ എല്ലാ പ്രായത്തിലുമുള്ള രോഗികൾക്ക് സമഗ്രമായ ചികിത്സ നൽകുന്നു. തികഞ്ഞ 5.0 റേറ്റിംഗോടെ, നിങ്ങളുടെ ആരോഗ്യത്തിന് എപ്പോഴും മുൻഗണന നൽകുന്ന വ്യക്തിഗതവും കരുതലുള്ളതുമായ ചികിത്സയ്ക്ക് ഞങ്ങൾ പ്രതിജ്ഞാബദ്ധമാണ്.
+                    </p>
+                    <p class="about-text">
+                        പള്ളിപ്പടി പരിപ്പാടം റോഡിൽ സൗകര്യപ്രദമായി സ്ഥിതി ചെയ്യുന്ന ഞങ്ങളുടെ ക്ലിനിക്ക് താനൂർ റെയിൽവേ സ്റ്റേഷനിൽ നിന്ന് വെറും 2.88 കിലോമീറ്റർ മാത്രം അകലെയാണ്. നിങ്ങൾക്ക് മികച്ച സേവനം നൽകാൻ ഞങ്ങളുടെ ക്ലിനിക്ക് ആഴ്ചയിൽ ആറ് ദിവസവും പ്രവർത്തിക്കുന്നു.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>വ്യക്തിഗത ചികിത്സാ പദ്ധതികൾ</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ആധുനിക ചികിത്സാ രീതി</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>കരുതലുള്ള പരിചരണം</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>സൗകര്യപ്രദമായ സ്ഥലം</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>എല്ലാ മതസ്ഥർക്കും സ്വാഗതം</span>
+                        </div>
+                    </div>
+
+                    <!-- Stats Counters -->
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-suffix">.0</span>
+                            <span class="stat-label">ശരാശരി റേറ്റിംഗ്</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-suffix"> ദിവസം</span>
+                            <span class="stat-label">ആഴ്ചയിൽ തുറന്നിരിക്കും</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">രോഗി ശ്രദ്ധ</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="288">0</span>
+                            <span class="stat-suffix"> km</span>
+                            <span class="stat-label">സ്റ്റേഷനിൽ നിന്ന്</span>
+                        </div>
+                    </div>
+
+                    <a href="#schedule" class="btn btn-primary about-btn">
+                        <i class="fas fa-calendar"></i> ലഭ്യത പരിശോധിക്കുക
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">ഞങ്ങളുടെ സേവനങ്ങൾ</span>
+                <h2 class="section-title">സമഗ്രമായ <span class="gradient-text">ചികിത്സാ സേവനങ്ങൾ</span></h2>
+                <p class="section-subtitle">നിങ്ങളുടെ ആവശ്യങ്ങൾക്കനുസരിച്ച് ഗുണമേന്മയുള്ള ആരോഗ്യ സേവനം</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>പൊതു പരിശോധന</h3>
+                    <p>എല്ലാ പ്രായത്തിലുമുള്ളവർക്കും സമഗ്രമായ ആരോഗ്യ പരിശോധനയും വ്യക്തിഗത ചികിത്സാ ഉപദേശവും.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-heart"></i>
+                    </div>
+                    <h3>പ്രതിരോധ ചികിത്സ</h3>
+                    <p>രോഗം വരുന്നതിന് മുമ്പ് തടയാൻ മുൻകരുതൽ ചികിത്സാ തന്ത്രങ്ങൾ.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <h3>വിട്ടുമാറാത്ത രോഗ ചികിത്സ</h3>
+                    <p>ദീർഘകാല രോഗങ്ങളുടെ തുടർച്ചയായ പരിചരണവും ചികിത്സയും.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>രോഗി ബോധവൽക്കരണം</h3>
+                    <p>നിങ്ങളുടെ ആരോഗ്യത്തെക്കുറിച്ചും ചികിത്സയെക്കുറിച്ചും അറിവ് നൽകൽ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCHEDULE SECTION ==================== -->
+    <section id="schedule" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">പ്രവൃത്തി സമയം</span>
+                <h2 class="section-title">ആഴ്ചയിലെ <span class="gradient-text">സമയക്രമം</span></h2>
+                <p class="section-subtitle">നിങ്ങളെ സേവിക്കാൻ ആഴ്ചയിൽ 6 ദിവസവും ഞങ്ങൾ തുറന്നിരിക്കും</p>
+            </div>
+
+            <div class="schedule-grid">
+                <!-- Saturday -->
+                <div class="schedule-card open reveal" data-day="saturday">
+                    <div class="schedule-day">
+                        <span class="day-name">ശനിയാഴ്ച</span>
+                        <span class="day-badge open-badge">Open</span>
+                    </div>
+                    <div class="schedule-hours">
+                        <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
+                    </div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                </div>
+                <!-- Sunday -->
+                <div class="schedule-card closed reveal" data-day="sunday">
+                    <div class="schedule-day">
+                        <span class="day-name">ഞായറാഴ്ച</span>
+                        <span class="day-badge closed-badge">Day Off</span>
+                    </div>
+                    <div class="schedule-hours">
+                        <i class="fas fa-bed"></i> അവധി
+                    </div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 0%;"></div></div>
+                </div>
+                <!-- Monday -->
+                <div class="schedule-card open reveal" data-day="monday">
+                    <div class="schedule-day">
+                        <span class="day-name">തിങ്കളാഴ്ച</span>
+                        <span class="day-badge open-badge">Open</span>
+                    </div>
+                    <div class="schedule-hours">
+                        <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
+                    </div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                </div>
+                <!-- Tuesday -->
+                <div class="schedule-card open reveal" data-day="tuesday">
+                    <div class="schedule-day">
+                        <span class="day-name">ചൊവ്വാഴ്ച</span>
+                        <span class="day-badge open-badge">Open</span>
+                    </div>
+                    <div class="schedule-hours">
+                        <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
+                    </div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                </div>
+                <!-- Wednesday -->
+                <div class="schedule-card open reveal" data-day="wednesday">
+                    <div class="schedule-day">
+                        <span class="day-name">ബുധനാഴ്ച</span>
+                        <span class="day-badge open-badge">Open</span>
+                    </div>
+                    <div class="schedule-hours">
+                        <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
+                    </div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                </div>
+                <!-- Thursday -->
+                <div class="schedule-card open reveal" data-day="thursday">
+                    <div class="schedule-day">
+                        <span class="day-name">വ്യാഴാഴ്ച</span>
+                        <span class="day-badge open-badge">Open</span>
+                    </div>
+                    <div class="schedule-hours">
+                        <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
+                    </div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                </div>
+                <!-- Friday -->
+                <div class="schedule-card closed reveal" data-day="friday">
+                    <div class="schedule-day">
+                        <span class="day-name">വെള്ളിയാഴ്ച</span>
+                        <span class="day-badge closed-badge">Day Off</span>
+                    </div>
+                    <div class="schedule-hours">
+                        <i class="fas fa-bed"></i> അവധി
+                    </div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="schedule-note reveal">
+                <i class="fas fa-info-circle"></i>
+                <span><strong>ഞായറാഴ്ചയും</strong> <strong>വെള്ളിയാഴ്ചയും</strong> അവധിയാണ്.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section id="faq" class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">ചോദ്യങ്ങൾ</span>
+                <h2 class="section-title">പതിവായി <span class="gradient-text">ചോദിക്കുന്ന ചോദ്യങ്ങൾ</span></h2>
+                <p class="section-subtitle">ഞങ്ങളുടെ ക്ലിനിക്കിനെക്കുറിച്ചുള്ള സാധാരണ സംശയങ്ങൾക്കുള്ള ഉത്തരങ്ങൾ</p>
+            </div>
+
+            <div class="faq-container reveal">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        <span>ഡോക്ടർ കലാദ് തങ്ങൾ എവിടെയാണ്?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>പള്ളിപ്പടി പരിപ്പാടം റോഡ്, തിരൂർ, കേരള 676307, ഇന്ത്യ.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>എന്താണ് പ്രവൃത്തി സമയം?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>ശനി മുതൽ വ്യാഴം വരെ രാവിലെ 10:30 മുതൽ വൈകുന്നേരം 5:30 വരെയാണ് പ്രവൃത്തി സമയം.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>ഏതൊക്കെ ദിവസങ്ങളിലാണ് അവധി?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>ഞായറാഴ്ചയും വെള്ളിയാഴ്ചയും അവധിയാണ്.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>ഏറ്റവും അടുത്ത റെയിൽവേ സ്റ്റേഷൻ ഏതാണ്?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>താനൂർ റെയിൽവേ സ്റ്റേഷൻ. ക്ലിനിക്കിൽ നിന്ന് ഏകദേശം 2.88 കിലോമീറ്റർ അകലെയാണ്.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>ക്ലിനിക്കിന്റെ റേറ്റിംഗ് എത്രയാണ്?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>5.0 / 5.0. രോഗികളുടെ റിവ്യൂകൾ അടിസ്ഥാനമാക്കി.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>അപ്പോയിന്റ്മെന്റ് ആവശ്യമുണ്ടോ?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>നേരിട്ട് വരാം, പക്ഷേ അപ്പോയിന്റ്മെന്റ് എടുക്കുന്നതാണ് നല്ലത്.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LOCATION SECTION ==================== -->
+    <section id="location" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Location</span>
+                <h2 class="section-title">Our <span class="gradient-text">Location</span></h2>
+                <p class="section-subtitle">Visit us at our conveniently located clinic in Tirur</p>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-map reveal-left">
+                    <div class="map-wrapper">
+                        <iframe
+                        src="https://www.google.com/maps?q=Pallippadi+Parippadam+Rd,+Tirur,+Kerala+676307,+India&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Kalad Thangal Tirur Location Map"
+                    ></iframe>
+                </div>
+            </div>
+
+            <div class="location-details reveal-right">
+                <div class="location-card">
+                    <div class="location-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="location-card-content">
+                        <h3>Address</h3>
+                        <p>Pallippadi Parippadam Rd,<br />Tirur, Kerala 676307, India</p>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-card-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="location-card-content">
+                        <h3>Nearest Railway Station</h3>
+                        <p>Tanur Railway Station<br /><span class="distance-badge">2.88 km away</span></p>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="location-card-content">
+                        <h3>Working Days</h3>
+                        <p>Saturday - Thursday<br /><span class="off-days">Closed: Sunday & Friday</span></p>
+                    </div>
+                </div>
+
+                <a href="https://maps.app.goo.gl/gTeChWZWcTEjF64U7?g_st=aw" target="_blank" rel="noopener" class="btn btn-primary location-btn">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACT SECTION ==================== -->
+<section id="contact" class="section section-alt">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Contact Us</span>
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="section-subtitle">We're here to help with your healthcare needs</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal-left">
+                <h3>Contact Information</h3>
+                <p class="contact-intro">Have questions or want to book an appointment? Reach out to us.</p>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <span class="contact-label">Address</span>
+                        <span class="contact-value">Pallippadi Parippadam Rd,<br />Tirur, Kerala 676307, India</span>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="contact-label">Hours</span>
+                        <span class="contact-value">Sat - Thu: 10:30 AM - 5:30 PM</span>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <span class="contact-label">Rating</span>
+                        <span class="contact-value">5.0 / 5.0 (2 Reviews)</span>
+                    </div>
+                </div>
+
+                <div class="contact-social">
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-btn" aria-label="Google"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper reveal-right">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required />
+                            <i class="fas fa-user form-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
+                            <i class="fas fa-phone form-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required />
+                        <i class="fas fa-envelope form-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Appointment request, inquiry, etc." />
+                        <i class="fas fa-pen form-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+                        <i class="fas fa-comment form-icon"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-success" id="form-success">
+                        <i class="fas fa-check-circle"></i> Message sent successfully!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-stethoscope"></i></span>
+                    <span class="logo-text">
+                        <span class="logo-name">Kalad Thangal</span>
+                        <span class="logo-sub">Tirur</span>
+                    </span>
+                </a>
+                <p>
+                    Providing quality healthcare services to the Tirur community.
+                    Your health and well-being are our top priorities.
+                </p>
+                <div class="footer-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>5.0 Rating</span>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#schedule">Working Hours</a></li>
+                    <li><a href="#location">Directions</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Pallippadi Parippadam Rd, Tirur, Kerala</li>
+                    <li><i class="fas fa-clock"></i> Sat - Thu: 10:30 AM - 5:30 PM</li>
+                    <li><i class="fas fa-train"></i> Tanur Station: 2.88 km</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kalad Thangal Tirur. All rights reserved.</p>
+            <p class="footer-made-with">
+                Made with <i class="fas fa-heart"></i> for better healthcare
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== BACK TO TOP BUTTON ==================== -->
+<button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ==================== JAVASCRIPT FILES ==================== -->
+<script src="js/three-background.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/scroll-effects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

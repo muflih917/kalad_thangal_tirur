@@ -1,0 +1,114 @@
+/* ============================================
+   KALAD THANGAL TIRUR - ANIMATIONS
+   ============================================ */
+
+/* Fade Up */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide Down */
+.animate-slide-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDown 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Delay utilities */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.5s; }
+.delay-4 { animation-delay: 0.7s; }
+
+/* Shimmer effect for buttons */
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Floating animation */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Pulse ring */
+.pulse-ring {
+    animation: pulseRing 2s infinite;
+}
+
+@keyframes pulseRing {
+    0% { box-shadow: 0 0 0 0 rgba(201, 162, 75, 0.5); }
+    70% { box-shadow: 0 0 0 20px rgba(201, 162, 75, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(201, 162, 75, 0); }
+}
+
+/* Gradient text animation */
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Rotate slow */
+.rotate-slow {
+    animation: rotate 20s linear infinite;
+}
+
+/* Scale in */
+.scale-in {
+    animation: scaleIn 0.6s ease forwards;
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Islamic pattern glow */
+.pattern-glow {
+    animation: patternGlow 4s ease-in-out infinite;
+}
+
+@keyframes patternGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
