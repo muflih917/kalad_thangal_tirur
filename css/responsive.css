@@ -160,10 +160,6 @@
         font-size: 1rem;
     }
 
-    .hero-rating {
-        flex-wrap: wrap;
-    }
-
     .schedule-grid {
         grid-template-columns: 1fr;
     }

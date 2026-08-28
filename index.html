@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>കലാദ് തങ്ങൾ തിരൂർ | ഡോക്ടർ - തിരൂർ, കേരളം</title>
-    <meta name="description" content="കലാദ് തങ്ങൾ തിരൂർ - തിരൂരിലെ വിശ്വസ്ത ഡോക്ടർ. 5.0 റേറ്റിംഗ്. ശനി-വ്യാഴം 10:30 AM - 5:30 PM. പള്ളിപ്പടി പരിപ്പാടം റോഡ്, തിരൂർ." />
+    <meta name="description" content="കലാദ് തങ്ങൾ തിരൂർ - തിരൂരിലെ വിശ്വസ്ത ഡോക്ടർ. ശനി-വ്യാഴം 10:30 AM - 5:30 PM. പള്ളിപ്പടി പരിപ്പാടം റോഡ്, തിരൂർ." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚕️</text></svg>" />
 
     <!-- Google Fonts -->
@@ -24,6 +24,38 @@
     <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
+
+    <!-- ==================== SCROLL ANIMATION INTRO PAGE ==================== -->
+    <section id="scroll-anim-section" aria-label="Animated intro sequence">
+        <div class="scroll-anim-sticky">
+
+            <!-- Frame canvas - fills full viewport, no background added -->
+            <canvas id="scroll-anim-canvas"></canvas>
+
+            <!-- Logo top-left (only branding shown during animation) -->
+            <a href="#hero" class="scroll-anim-logo" id="scroll-anim-logo">
+                <span class="sa-logo-icon"><i class="fas fa-stethoscope"></i></span>
+                <span class="sa-logo-text">
+                    <span class="sa-logo-name">കലാദ് തങ്ങൾ</span>
+                    <span class="sa-logo-sub">തിരൂർ</span>
+                </span>
+            </a>
+
+            <!-- Skip button (top right) -->
+            <button id="scroll-anim-skip" aria-label="Skip intro animation">
+                <i class="fas fa-forward"></i> Skip
+            </button>
+
+            <!-- Scroll hint (bottom centre) -->
+            <div id="scroll-anim-hint">
+                <div class="scroll-hint-mouse">
+                    <div class="scroll-hint-wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END SCROLL ANIMATION ==================== -->
 
     <!-- ==================== PRELOADER ==================== -->
     <div id="preloader">
@@ -67,7 +99,7 @@
                 <li><a href="#contact" class="nav-link">ബന്ധപ്പെടുക</a></li>
             </ul>
             <div class="nav-right">
-                <a href="#contact" class="btn btn-nav">ബുക്ക് ചെയ്യുക</a>
+                <a href="#contact" class="btn btn-nav">ബന്ധപ്പെടുക</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -106,19 +138,6 @@
                 കരുതലോടെയും മികവോടെയും ആരോഗ്യ സേവനം. തിരൂർ സമൂഹത്തിന് സമർപ്പണത്തോടെയും വ്യക്തിഗത ശ്രദ്ധയോടെയും.
                 <span class="hero-welcome-ml">എല്ലാ മതസ്ഥർക്കും സ്വാഗതം</span>
             </p>
-
-            <div class="hero-rating animate-fade-up">
-                <span class="rating-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-                <span class="rating-score">5.0</span>
-                <span class="rating-divider">|</span>
-                <span class="rating-reviews">2 റിവ്യൂകൾ</span>
-            </div>
 
             <div class="hero-buttons animate-fade-up">
                 <a href="#schedule" class="btn btn-primary">
@@ -180,17 +199,13 @@
                             <span>ഡോ. കലാദ് തങ്ങൾ</span>
                         </div>
                         <div class="about-image-ring"></div>
-                        <div class="about-float-badge">
-                            <i class="fas fa-award"></i>
-                            <span>5.0 റേറ്റിംഗ്</span>
-                        </div>
                     </div>
                 </div>
 
                 <div class="about-content reveal-right">
                     <h3>കലാദ് തങ്ങൾ തിരൂരിലേക്ക് സ്വാഗതം</h3>
                     <p class="about-text">
-                        കേരളത്തിലെ തിരൂരിന്റെ ഹൃദയഭാഗത്ത് സ്ഥിതി ചെയ്യുന്ന ഡോ. കലാദ് തങ്ങൾ എല്ലാ പ്രായത്തിലുമുള്ള രോഗികൾക്ക് സമഗ്രമായ ചികിത്സ നൽകുന്നു. തികഞ്ഞ 5.0 റേറ്റിംഗോടെ, നിങ്ങളുടെ ആരോഗ്യത്തിന് എപ്പോഴും മുൻഗണന നൽകുന്ന വ്യക്തിഗതവും കരുതലുള്ളതുമായ ചികിത്സയ്ക്ക് ഞങ്ങൾ പ്രതിജ്ഞാബദ്ധമാണ്.
+                        കേരളത്തിലെ തിരൂരിന്റെ ഹൃദയഭാഗത്ത് സ്ഥിതി ചെയ്യുന്ന ഡോ. കലാദ് തങ്ങൾ എല്ലാ പ്രായത്തിലുമുള്ള രോഗികൾക്ക് സമഗ്രമായ ചികിത്സ നൽകുന്നു. നിങ്ങളുടെ ആരോഗ്യത്തിന് എപ്പോഴും മുൻഗണന നൽകുന്ന വ്യക്തിഗതവും കരുതലുള്ളതുമായ ചികിത്സയ്ക്ക് ഞങ്ങൾ പ്രതിജ്ഞാബദ്ധരാണ്.
                     </p>
                     <p class="about-text">
                         പള്ളിപ്പടി പരിപ്പാടം റോഡിൽ സൗകര്യപ്രദമായി സ്ഥിതി ചെയ്യുന്ന ഞങ്ങളുടെ ക്ലിനിക്ക് താനൂർ റെയിൽവേ സ്റ്റേഷനിൽ നിന്ന് വെറും 2.88 കിലോമീറ്റർ മാത്രം അകലെയാണ്. നിങ്ങൾക്ക് മികച്ച സേവനം നൽകാൻ ഞങ്ങളുടെ ക്ലിനിക്ക് ആഴ്ചയിൽ ആറ് ദിവസവും പ്രവർത്തിക്കുന്നു.
@@ -223,18 +238,8 @@
                     <div class="stats-row">
                         <div class="stat-card">
                             <span class="stat-number" data-count="5">0</span>
-                            <span class="stat-suffix">.0</span>
-                            <span class="stat-label">ശരാശരി റേറ്റിംഗ്</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="6">0</span>
                             <span class="stat-suffix"> ദിവസം</span>
                             <span class="stat-label">ആഴ്ചയിൽ തുറന്നിരിക്കും</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="100">0</span>
-                            <span class="stat-suffix">%</span>
-                            <span class="stat-label">രോഗി ശ്രദ്ധ</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number" data-count="288">0</span>
@@ -437,15 +442,6 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>ക്ലിനിക്കിന്റെ റേറ്റിംഗ് എത്രയാണ്?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>5.0 / 5.0. രോഗികളുടെ റിവ്യൂകൾ അടിസ്ഥാനമാക്കി.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
                         <span>അപ്പോയിന്റ്മെന്റ് ആവശ്യമുണ്ടോ?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
@@ -551,14 +547,6 @@
                     </div>
                 </div>
 
-                <div class="contact-info-item">
-                    <i class="fas fa-star"></i>
-                    <div>
-                        <span class="contact-label">Rating</span>
-                        <span class="contact-value">5.0 / 5.0 (2 Reviews)</span>
-                    </div>
-                </div>
-
                 <div class="contact-social">
                     <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -624,14 +612,6 @@
                     Providing quality healthcare services to the Tirur community.
                     Your health and well-being are our top priorities.
                 </p>
-                <div class="footer-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <span>5.0 Rating</span>
-                </div>
             </div>
 
             <div class="footer-links">
@@ -684,5 +664,6 @@
 <script src="js/animations.js"></script>
 <script src="js/scroll-effects.js"></script>
 <script src="js/main.js"></script>
+<script src="js/scroll-animation.js"></script>
 </body>
 </html>
