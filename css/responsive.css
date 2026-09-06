@@ -82,11 +82,23 @@
     }
 
     .about-image-wrapper {
-        max-width: 280px;
+        max-width: 460px;
     }
 
     .about-features {
         grid-template-columns: 1fr;
+    }
+
+    .about-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-actions {
+        align-items: stretch;
+    }
+
+    .about-actions .btn {
+        justify-content: center;
     }
 
     .stats-row {

@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>കലാദ് തങ്ങൾ തിരൂർ | ഡോക്ടർ - തിരൂർ, കേരളം</title>
-    <meta name="description" content="കലാദ് തങ്ങൾ തിരൂർ - തിരൂരിലെ വിശ്വസ്ത ഡോക്ടർ. ശനി-വ്യാഴം 10:30 AM - 5:30 PM. പള്ളിപ്പടി പരിപ്പാടം റോഡ്, തിരൂർ." />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚕️</text></svg>" />
+    <meta name="description" content="കലാദ് തങ്ങൾ തിരൂർ - തിരൂരിലെ വിശ്വസ്ത ഡോക്ടർ. എല്ലാ ദിവസവും രാവിലെ 10:30 മുതൽ വൈകുന്നേരം 5:30 വരെ. പള്ളിപ്പടി പരിപ്പാടം റോഡ്, തിരൂർ." />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.svg" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,49 +26,13 @@
 </head>
 <body>
 
-    <!-- ==================== SCROLL ANIMATION INTRO PAGE ==================== -->
-    <section id="scroll-anim-section" aria-label="Animated intro sequence">
-        <div class="scroll-anim-sticky">
-
-            <!-- Frame canvas - fills full viewport, no background added -->
-            <canvas id="scroll-anim-canvas"></canvas>
-
-            <!-- Logo top-left (only branding shown during animation) -->
-            <a href="#hero" class="scroll-anim-logo" id="scroll-anim-logo">
-                <span class="sa-logo-icon"><i class="fas fa-stethoscope"></i></span>
-                <span class="sa-logo-text">
-                    <span class="sa-logo-name">കലാദ് തങ്ങൾ</span>
-                    <span class="sa-logo-sub">തിരൂർ</span>
-                </span>
-            </a>
-
-            <!-- Skip button (top right) -->
-            <button id="scroll-anim-skip" aria-label="Skip intro animation">
-                <i class="fas fa-forward"></i> Skip
-            </button>
-
-            <!-- Scroll hint (bottom centre) -->
-            <div id="scroll-anim-hint">
-                <div class="scroll-hint-mouse">
-                    <div class="scroll-hint-wheel"></div>
-                </div>
-                <span>Scroll to explore</span>
-            </div>
-        </div>
-    </section>
-    <!-- ==================== END SCROLL ANIMATION ==================== -->
-
     <!-- ==================== PRELOADER ==================== -->
     <div id="preloader">
         <div class="preloader-content">
             <div class="preloader-logo">
-                <i class="fas fa-stethoscope"></i>
+                <span class="preloader-icon" aria-hidden="true"><i class="fas fa-heart-pulse"></i></span>
             </div>
-            <div class="preloader-text">
-                <span class="preloader-word">കലാദ്</span>
-                <span class="preloader-space"></span>
-                <span class="preloader-word">തങ്ങൾ</span>
-            </div>
+            <div class="preloader-text">കലാദ് തങ്ങൾ</div>
             <div class="preloader-bar">
                 <div class="preloader-bar-fill"></div>
             </div>
@@ -83,7 +48,7 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <span class="logo-icon"><i class="fas fa-stethoscope"></i></span>
+                <span class="logo-icon"><i class="fas fa-heart-pulse"></i></span>
                 <span class="logo-text">
                     <span class="logo-name">കലാദ് തങ്ങൾ</span>
                     <span class="logo-sub">തിരൂർ</span>
@@ -91,15 +56,16 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#hero" class="nav-link active">ഹോം</a></li>
+                <li><a href="#gallery" class="nav-link">ദൃശ്യങ്ങൾ</a></li>
                 <li><a href="#about" class="nav-link">ഞങ്ങളെക്കുറിച്ച്</a></li>
                 <li><a href="#services" class="nav-link">സേവനങ്ങൾ</a></li>
                 <li><a href="#schedule" class="nav-link">സമയക്രമം</a></li>
                 <li><a href="#faq" class="nav-link">ചോദ്യങ്ങൾ</a></li>
                 <li><a href="#location" class="nav-link">സ്ഥലം</a></li>
-                <li><a href="#contact" class="nav-link">ബന്ധപ്പെടുക</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-right">
-                <a href="#contact" class="btn btn-nav">ബന്ധപ്പെടുക</a>
+                <a href="#contact" class="btn btn-nav">ബുക്ക് ചെയ്യുക</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -111,11 +77,8 @@
 
     <!-- ==================== HERO SECTION ==================== -->
     <section id="hero">
-        <!-- Three.js Canvas Background -->
         <canvas id="three-canvas"></canvas>
         <div class="hero-overlay"></div>
-
-        <!-- Floating decorative elements -->
         <div class="hero-float-shape shape-1"></div>
         <div class="hero-float-shape shape-2"></div>
         <div class="hero-float-shape shape-3"></div>
@@ -124,14 +87,15 @@
         <div class="hero-container">
             <div class="hero-badge animate-fade-up">
                 <span class="badge-dot"></span>
-                <span>ഞങ്ങളുടെ ക്ലിനിക്കിലേക്ക് സ്വാഗതം</span>
+                <span>Welcome to Our Practice | കലാദ് തങ്ങളിലേക്ക് സ്വാഗതം</span>
             </div>
 
             <h1 class="hero-title">
                 <span class="hero-greeting animate-slide-down">
-                    Dr. Kalad Thangal
-                    <span class="malayalam-name">ഡോ. കലാദ് തങ്ങൾ</span>
+                    Kalad Thangal
+                    <span class="malayalam-name">കലാദ് തങ്ങൾ</span>
                 </span>
+                <span class="hero-static-subtitle">തിരൂരിലെ വിശ്വസ്ത ഡോക്ടർ</span>
             </h1>
 
             <p class="hero-subtitle animate-fade-up">
@@ -153,7 +117,7 @@
                     <i class="fas fa-clock"></i>
                     <div>
                         <span class="info-label">പ്രവൃത്തി സമയം</span>
-                        <span class="info-value">10:30 AM - 5:30 PM</span>
+                        <span class="info-value">എല്ലാ ദിവസവും 10:30 AM - 5:30 PM</span>
                     </div>
                 </div>
                 <div class="hero-info-card">
@@ -173,7 +137,6 @@
             </div>
         </div>
 
-        <!-- Scroll indicator -->
         <div class="scroll-indicator animate-fade-up">
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
@@ -182,80 +145,110 @@
         </div>
     </section>
 
+    <!-- ==================== FANNED CAROUSEL SECTION ==================== -->
+    <section id="gallery" class="section carousel-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">ഞങ്ങളുടെ സ്ഥലം</span>
+                <h2 class="section-title">തിരൂരിന്റെ <span class="gradient-text">ദൃശ്യങ്ങൾ</span></h2>
+            </div>
+
+            <div class="carousel-stage reveal" data-style="1" id="carousel-stage">
+                <button class="carousel-arrow" id="carousel-prev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+
+                <div class="carousel-frame" id="carousel-frame"></div>
+
+                <button class="carousel-arrow" id="carousel-next" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+
+            <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+    </section>
+
     <!-- ==================== ABOUT SECTION ==================== -->
-    <section id="about" class="section">
+    <section id="about" class="section about-section">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag">ഞങ്ങളെക്കുറിച്ച്</span>
-                <h2 class="section-title">നിങ്ങളുടെ <span class="gradient-text">വിശ്വസ്ത ആരോഗ്യ പങ്കാളി</span></h2>
-                <p class="section-subtitle">വ്യക്തിഗത ശ്രദ്ധയോടെ മികച്ച ചികിത്സ നൽകാൻ സമർപ്പിതം</p>
+                <h2 class="section-title">കരുതലോടെ <span class="gradient-text">ആരോഗ്യ സേവനം</span></h2>
+                <p class="section-subtitle">തിരൂരിൽ സൗകര്യപ്രദവും വിശ്വസനീയവുമായ ചികിത്സാ സഹായം.</p>
             </div>
 
-            <div class="about-grid">
-                <div class="about-image reveal-left">
-                    <div class="about-image-wrapper">
-                        <div class="about-image-placeholder">
-                            <i class="fas fa-user-doctor"></i>
-                            <span>ഡോ. കലാദ് തങ്ങൾ</span>
+            <div class="about-grid about-modern-grid">
+                <div class="about-info-card reveal-left">
+                    <div class="about-card-top">
+                        <span class="about-card-icon"><i class="fas fa-user-doctor"></i></span>
+                        <div>
+                            <span class="about-eyebrow">കലാദ് തങ്ങൾ</span>
+                            <h3>എല്ലാ ദിവസവും തുറന്ന് പ്രവർത്തിക്കുന്നു</h3>
                         </div>
-                        <div class="about-image-ring"></div>
+                    </div>
+
+                    <div class="about-quick-list">
+                        <div class="about-quick-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span>സമയം</span>
+                                <strong>10:30 AM - 5:30 PM</strong>
+                            </div>
+                        </div>
+                        <div class="about-quick-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <span>സ്ഥലം</span>
+                                <strong>പള്ളിപ്പടി പരിപ്പാടം റോഡ്, തിരൂർ</strong>
+                            </div>
+                        </div>
+                        <div class="about-quick-item">
+                            <i class="fas fa-train"></i>
+                            <div>
+                                <span>അടുത്ത റെയിൽവേ സ്റ്റേഷൻ</span>
+                                <strong>താനൂർ - 2.88 km</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="about-content reveal-right">
-                    <h3>കലാദ് തങ്ങൾ തിരൂരിലേക്ക് സ്വാഗതം</h3>
+                    <h3>സൗഹൃദപരമായ സമീപനം, വ്യക്തമായ പരിചരണം</h3>
                     <p class="about-text">
-                        കേരളത്തിലെ തിരൂരിന്റെ ഹൃദയഭാഗത്ത് സ്ഥിതി ചെയ്യുന്ന ഡോ. കലാദ് തങ്ങൾ എല്ലാ പ്രായത്തിലുമുള്ള രോഗികൾക്ക് സമഗ്രമായ ചികിത്സ നൽകുന്നു. നിങ്ങളുടെ ആരോഗ്യത്തിന് എപ്പോഴും മുൻഗണന നൽകുന്ന വ്യക്തിഗതവും കരുതലുള്ളതുമായ ചികിത്സയ്ക്ക് ഞങ്ങൾ പ്രതിജ്ഞാബദ്ധരാണ്.
+                        തിരൂരിലും സമീപ പ്രദേശങ്ങളിലുമുള്ളവർക്ക് എളുപ്പത്തിൽ എത്തിച്ചേരാവുന്ന സ്ഥലത്താണ് സേവനം. ആവശ്യം മനസ്സിലാക്കി ശ്രദ്ധയോടെയും ലളിതമായ വിശദീകരണത്തോടെയും ചികിത്സാ നിർദ്ദേശങ്ങൾ നൽകുന്നു.
                     </p>
-                    <p class="about-text">
-                        പള്ളിപ്പടി പരിപ്പാടം റോഡിൽ സൗകര്യപ്രദമായി സ്ഥിതി ചെയ്യുന്ന ഞങ്ങളുടെ ക്ലിനിക്ക് താനൂർ റെയിൽവേ സ്റ്റേഷനിൽ നിന്ന് വെറും 2.88 കിലോമീറ്റർ മാത്രം അകലെയാണ്. നിങ്ങൾക്ക് മികച്ച സേവനം നൽകാൻ ഞങ്ങളുടെ ക്ലിനിക്ക് ആഴ്ചയിൽ ആറ് ദിവസവും പ്രവർത്തിക്കുന്നു.
+                    <p class="about-text important-message">
+                        പ്രധാന അറിയിപ്പ്: വരുന്നവർ എന്തായാലും വിളിച്ച് ബുക്ക് ചെയ്തു വരുക.
                     </p>
 
-                    <div class="about-features">
+                    <div class="about-feature-grid">
                         <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>വ്യക്തിഗത ചികിത്സാ പദ്ധതികൾ</span>
+                            <i class="fas fa-calendar-check"></i>
+                            <span>ആഴ്ചയിൽ 7 ദിവസം</span>
                         </div>
                         <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>ആധുനിക ചികിത്സാ രീതി</span>
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>കരുതലുള്ള സേവനം</span>
                         </div>
                         <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>കരുതലുള്ള പരിചരണം</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>സൗകര്യപ്രദമായ സ്ഥലം</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>എല്ലാ മതസ്ഥർക്കും സ്വാഗതം</span>
+                            <i class="fas fa-route"></i>
+                            <span>എളുപ്പത്തിൽ എത്താം</span>
                         </div>
                     </div>
 
-                    <!-- Stats Counters -->
-                    <div class="stats-row">
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="5">0</span>
-                            <span class="stat-suffix"> ദിവസം</span>
-                            <span class="stat-label">ആഴ്ചയിൽ തുറന്നിരിക്കും</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-count="288">0</span>
-                            <span class="stat-suffix"> km</span>
-                            <span class="stat-label">സ്റ്റേഷനിൽ നിന്ന്</span>
-                        </div>
+                    <div class="about-actions">
+                        <a href="#schedule" class="btn btn-primary about-btn">
+                            <i class="fas fa-calendar"></i> സമയം കാണുക
+                        </a>
+                        <a href="#location" class="btn btn-outline about-btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i> വഴി കാണുക
+                        </a>
                     </div>
-
-                    <a href="#schedule" class="btn btn-primary about-btn">
-                        <i class="fas fa-calendar"></i> ലഭ്യത പരിശോധിക്കുക
-                    </a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ==================== SERVICES SECTION ==================== -->
     <section id="services" class="section section-alt">
         <div class="container">
@@ -266,28 +259,28 @@
             </div>
 
             <div class="services-grid">
-                <div class="service-card reveal">
+                <div class="service-card reveal" data-tilt>
                     <div class="service-icon">
                         <i class="fas fa-heart-pulse"></i>
                     </div>
                     <h3>പൊതു പരിശോധന</h3>
                     <p>എല്ലാ പ്രായത്തിലുമുള്ളവർക്കും സമഗ്രമായ ആരോഗ്യ പരിശോധനയും വ്യക്തിഗത ചികിത്സാ ഉപദേശവും.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal" data-tilt>
                     <div class="service-icon">
                         <i class="fas fa-shield-heart"></i>
                     </div>
                     <h3>പ്രതിരോധ ചികിത്സ</h3>
                     <p>രോഗം വരുന്നതിന് മുമ്പ് തടയാൻ മുൻകരുതൽ ചികിത്സാ തന്ത്രങ്ങൾ.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal" data-tilt>
                     <div class="service-icon">
                         <i class="fas fa-notes-medical"></i>
                     </div>
                     <h3>വിട്ടുമാറാത്ത രോഗ ചികിത്സ</h3>
                     <p>ദീർഘകാല രോഗങ്ങളുടെ തുടർച്ചയായ പരിചരണവും ചികിത്സയും.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal" data-tilt>
                     <div class="service-icon">
                         <i class="fas fa-hand-holding-medical"></i>
                     </div>
@@ -304,7 +297,7 @@
             <div class="section-header reveal">
                 <span class="section-tag">പ്രവൃത്തി സമയം</span>
                 <h2 class="section-title">ആഴ്ചയിലെ <span class="gradient-text">സമയക്രമം</span></h2>
-                <p class="section-subtitle">നിങ്ങളെ സേവിക്കാൻ ആഴ്ചയിൽ 6 ദിവസവും ഞങ്ങൾ തുറന്നിരിക്കും</p>
+                <p class="section-subtitle">എല്ലാ ദിവസവും ഞങ്ങൾ നിങ്ങളെ സേവിക്കാൻ തയ്യാറാണ്</p>
             </div>
 
             <div class="schedule-grid">
@@ -317,18 +310,18 @@
                     <div class="schedule-hours">
                         <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
                     </div>
-                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 100%;"></div></div>
                 </div>
                 <!-- Sunday -->
-                <div class="schedule-card closed reveal" data-day="sunday">
+                <div class="schedule-card open reveal" data-day="sunday">
                     <div class="schedule-day">
                         <span class="day-name">ഞായറാഴ്ച</span>
-                        <span class="day-badge closed-badge">Day Off</span>
+                        <span class="day-badge open-badge">Open</span>
                     </div>
                     <div class="schedule-hours">
-                        <i class="fas fa-bed"></i> അവധി
+                        <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
                     </div>
-                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 0%;"></div></div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 100%;"></div></div>
                 </div>
                 <!-- Monday -->
                 <div class="schedule-card open reveal" data-day="monday">
@@ -339,7 +332,7 @@
                     <div class="schedule-hours">
                         <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
                     </div>
-                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 100%;"></div></div>
                 </div>
                 <!-- Tuesday -->
                 <div class="schedule-card open reveal" data-day="tuesday">
@@ -350,7 +343,7 @@
                     <div class="schedule-hours">
                         <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
                     </div>
-                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 100%;"></div></div>
                 </div>
                 <!-- Wednesday -->
                 <div class="schedule-card open reveal" data-day="wednesday">
@@ -361,7 +354,7 @@
                     <div class="schedule-hours">
                         <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
                     </div>
-                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 100%;"></div></div>
                 </div>
                 <!-- Thursday -->
                 <div class="schedule-card open reveal" data-day="thursday">
@@ -372,24 +365,24 @@
                     <div class="schedule-hours">
                         <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
                     </div>
-                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 70%;"></div></div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 100%;"></div></div>
                 </div>
                 <!-- Friday -->
-                <div class="schedule-card closed reveal" data-day="friday">
+                <div class="schedule-card open reveal" data-day="friday">
                     <div class="schedule-day">
                         <span class="day-name">വെള്ളിയാഴ്ച</span>
-                        <span class="day-badge closed-badge">Day Off</span>
+                        <span class="day-badge open-badge">Open</span>
                     </div>
                     <div class="schedule-hours">
-                        <i class="fas fa-bed"></i> അവധി
+                        <i class="fas fa-clock"></i> 10:30 AM - 05:30 PM
                     </div>
-                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 0%;"></div></div>
+                    <div class="schedule-bar"><div class="schedule-bar-fill" style="width: 100%;"></div></div>
                 </div>
             </div>
 
             <div class="schedule-note reveal">
                 <i class="fas fa-info-circle"></i>
-                <span><strong>ഞായറാഴ്ചയും</strong> <strong>വെള്ളിയാഴ്ചയും</strong> അവധിയാണ്.</span>
+                <span>എല്ലാ ദിവസവും 10:30 AM മുതൽ 5:30 PM വരെ ലഭ്യമാണ്.</span>
             </div>
         </div>
     </section>
@@ -400,7 +393,7 @@
             <div class="section-header reveal">
                 <span class="section-tag">ചോദ്യങ്ങൾ</span>
                 <h2 class="section-title">പതിവായി <span class="gradient-text">ചോദിക്കുന്ന ചോദ്യങ്ങൾ</span></h2>
-                <p class="section-subtitle">ഞങ്ങളുടെ ക്ലിനിക്കിനെക്കുറിച്ചുള്ള സാധാരണ സംശയങ്ങൾക്കുള്ള ഉത്തരങ്ങൾ</p>
+                <p class="section-subtitle">സാധാരണ സംശയങ്ങൾക്കുള്ള ലളിതമായ ഉത്തരങ്ങൾ</p>
             </div>
 
             <div class="faq-container reveal">
@@ -419,7 +412,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>ശനി മുതൽ വ്യാഴം വരെ രാവിലെ 10:30 മുതൽ വൈകുന്നേരം 5:30 വരെയാണ് പ്രവൃത്തി സമയം.</p>
+                        <p>എല്ലാ ദിവസവും രാവിലെ 10:30 മുതൽ വൈകുന്നേരം 5:30 വരെയാണ് പ്രവൃത്തി സമയം.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -428,7 +421,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>ഞായറാഴ്ചയും വെള്ളിയാഴ്ചയും അവധിയാണ്.</p>
+                        <p>ഞങ്ങൾക്ക് അവധിയില്ല; എല്ലാ ദിവസവും സേവനം ലഭ്യമാണ്.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -437,7 +430,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>താനൂർ റെയിൽവേ സ്റ്റേഷൻ. ക്ലിനിക്കിൽ നിന്ന് ഏകദേശം 2.88 കിലോമീറ്റർ അകലെയാണ്.</p>
+                        <p>താനൂർ റെയിൽവേ സ്റ്റേഷൻ. സ്ഥലത്ത് നിന്ന് ഏകദേശം 2.88 കിലോമീറ്റർ അകലെയാണ്.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -459,7 +452,7 @@
             <div class="section-header reveal">
                 <span class="section-tag">Location</span>
                 <h2 class="section-title">Our <span class="gradient-text">Location</span></h2>
-                <p class="section-subtitle">Visit us at our conveniently located clinic in Tirur</p>
+                <p class="section-subtitle">Visit us at our conveniently located place in Tirur</p>
             </div>
 
             <div class="location-grid">
@@ -505,7 +498,7 @@
                     </div>
                     <div class="location-card-content">
                         <h3>Working Days</h3>
-                        <p>Saturday - Thursday<br /><span class="off-days">Closed: Sunday & Friday</span></p>
+                        <p>All days<br /><span class="off-days">No holidays</span></p>
                     </div>
                 </div>
 
@@ -517,7 +510,7 @@
     </div>
 </section>
 
-<!-- ==================== CONTACT SECTION ==================== -->
+<!-- ==================== CONTACT SECTION (Form Removed) ==================== -->
 <section id="contact" class="section section-alt">
     <div class="container">
         <div class="section-header reveal">
@@ -526,7 +519,7 @@
             <p class="section-subtitle">We're here to help with your healthcare needs</p>
         </div>
 
-        <div class="contact-grid">
+        <div class="contact-info-only" style="max-width: 600px; margin: 0 auto; text-align: center;">
             <div class="contact-info reveal-left">
                 <h3>Contact Information</h3>
                 <p class="contact-intro">Have questions or want to book an appointment? Reach out to us.</p>
@@ -543,7 +536,7 @@
                     <i class="fas fa-clock"></i>
                     <div>
                         <span class="contact-label">Hours</span>
-                        <span class="contact-value">Sat - Thu: 10:30 AM - 5:30 PM</span>
+                        <span class="contact-value">All days: 10:30 AM - 5:30 PM</span>
                     </div>
                 </div>
 
@@ -553,44 +546,6 @@
                     <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="#" class="social-btn" aria-label="Google"><i class="fab fa-google"></i></a>
                 </div>
-            </div>
-
-            <div class="contact-form-wrapper reveal-right">
-                <form id="contact-form" class="contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required />
-                            <i class="fas fa-user form-icon"></i>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
-                            <i class="fas fa-phone form-icon"></i>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Your email" required />
-                        <i class="fas fa-envelope form-icon"></i>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Appointment request, inquiry, etc." />
-                        <i class="fas fa-pen form-icon"></i>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
-                        <i class="fas fa-comment form-icon"></i>
-                    </div>
-                    <button type="submit" class="btn btn-primary form-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    <div class="form-success" id="form-success">
-                        <i class="fas fa-check-circle"></i> Message sent successfully!
-                    </div>
-                </form>
             </div>
         </div>
     </div>
@@ -602,7 +557,7 @@
         <div class="footer-grid">
             <div class="footer-about">
                 <a href="#hero" class="footer-logo">
-                    <span class="logo-icon"><i class="fas fa-stethoscope"></i></span>
+                    <span class="logo-icon"><i class="fas fa-heart-pulse"></i></span>
                     <span class="logo-text">
                         <span class="logo-name">Kalad Thangal</span>
                         <span class="logo-sub">Tirur</span>
@@ -639,7 +594,7 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i> Pallippadi Parippadam Rd, Tirur, Kerala</li>
-                    <li><i class="fas fa-clock"></i> Sat - Thu: 10:30 AM - 5:30 PM</li>
+                    <li><i class="fas fa-clock"></i> All days: 10:30 AM - 5:30 PM</li>
                     <li><i class="fas fa-train"></i> Tanur Station: 2.88 km</li>
                 </ul>
             </div>
@@ -659,11 +614,14 @@
     <i class="fas fa-arrow-up"></i>
 </button>
 
+<!-- ==================== CURSOR FOLLOWER ==================== -->
+<div id="cursor-follower"></div>
+<div id="cursor-dot"></div>
+
 <!-- ==================== JAVASCRIPT FILES ==================== -->
 <script src="js/three-background.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/scroll-effects.js"></script>
 <script src="js/main.js"></script>
-<script src="js/scroll-animation.js"></script>
 </body>
 </html>
