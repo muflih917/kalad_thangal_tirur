@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    KALAD THANGAL TIRUR - RESPONSIVE
    ============================================ */
 
@@ -192,5 +192,38 @@
 
     .location-card-icon {
         margin: 0 auto;
+    }
+}
+
+/* Extra small screens (phones < 380px) */
+@media (max-width: 380px) {
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .hero-info-cards {
+        gap: 8px;
+    }
+
+    .hero-info-card {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+
+    .carousel-stage {
+        gap: 8px;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-frame {
+        width: 200px;
+        height: 280px;
     }
 }

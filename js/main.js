@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (diff === 1) pos = 'next';
             else if (diff === carouselItems.length - 1) pos = 'prev';
             card.dataset.pos = pos;
-            card.innerHTML = `<img src="${item.img}" alt="${item.place}"><span class="carousel-tag">${item.place}</span>`;
+            card.innerHTML = `<img src="${item.img}" alt="${item.place}" loading="lazy" decoding="async"><span class="carousel-tag">${item.place}</span>`;
             frame.appendChild(card);
         });
 

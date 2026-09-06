@@ -3,15 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('three-canvas');
     if (!canvas) return;
 
+    const isMobile = window.innerWidth < 768;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !isMobile });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
+
 
     // Create star/particle field
     const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 1500;
+    const particlesCount = isMobile ? 300 : 1500;
     const posArray = new Float32Array(particlesCount * 3);
     const colorsArray = new Float32Array(particlesCount * 3);
 
@@ -51,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sphereGeometry = new THREE.SphereGeometry(0.08, 16, 16);
     const sphereMaterial = new THREE.MeshBasicMaterial({ color: '#e2c275', transparent: true, opacity: 0.6 });
     const spheres = [];
-    for (let i = 0; i < 20; i++) {
+    const sphereCount = isMobile ? 5 : 20;
+    for (let i = 0; i < sphereCount; i++) {
         const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
         sphere.position.set(
             (Math.random() - 0.5) * 15,
