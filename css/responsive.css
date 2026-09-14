@@ -168,6 +168,13 @@
         font-size: 1.3rem;
     }
 
+    .floating-call-button {
+        right: 20px;
+        bottom: 85px;
+        width: 48px;
+        height: 48px;
+    }
+
     .hero-subtitle {
         font-size: 1rem;
     }

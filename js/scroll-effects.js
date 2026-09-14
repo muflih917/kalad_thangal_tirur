@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             // Simulate sending
             const submitBtn = contactForm.querySelector('.form-submit');
+            if (!submitBtn) return;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
@@ -32,10 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.textContent = 'Send Message';
                 submitBtn.disabled = false;
                 contactForm.reset();
-                formSuccess.classList.add('show');
-                setTimeout(() => {
-                    formSuccess.classList.remove('show');
-                }, 4000);
+                if (formSuccess) {
+                    formSuccess.classList.add('show');
+                    setTimeout(() => {
+                        formSuccess.classList.remove('show');
+                    }, 4000);
+                }
             }, 1500);
         });
     }

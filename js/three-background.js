@@ -1,13 +1,19 @@
 // Three.js Background - 3D Particle Field
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('three-canvas');
-    if (!canvas) return;
+    if (!canvas || typeof THREE === 'undefined') return;
 
     const isMobile = window.innerWidth < 768;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !isMobile });
+    let renderer;
+    try {
+        renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !isMobile });
+    } catch (error) {
+        console.warn('3D background is unavailable in this browser.', error);
+        return;
+    }
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
 
@@ -54,15 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const sphereGeometry = new THREE.SphereGeometry(0.08, 16, 16);
     const sphereMaterial = new THREE.MeshBasicMaterial({ color: '#e2c275', transparent: true, opacity: 0.6 });
     const spheres = [];
+    const sphereBaseY = [];
     const sphereCount = isMobile ? 5 : 20;
     for (let i = 0; i < sphereCount; i++) {
         const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        const y = (Math.random() - 0.5) * 15;
         sphere.position.set(
             (Math.random() - 0.5) * 15,
-            (Math.random() - 0.5) * 15,
+            y,
             (Math.random() - 0.5) * 15
         );
         spheres.push(sphere);
+        sphereBaseY.push(y);
         scene.add(sphere);
     }
 
@@ -85,10 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
         camera.lookAt(0, 0, 0);
 
         // Animate spheres
+        const time = Date.now() * 0.001;
         spheres.forEach((sphere, index) => {
             sphere.rotation.x += 0.01;
             sphere.rotation.y += 0.01;
-            sphere.position.y += Math.sin(Date.now() * 0.001 + index) * 0.001;
+            sphere.position.y = sphereBaseY[index] + Math.sin(time + index) * 0.15;
         });
 
         renderer.render(scene, camera);
