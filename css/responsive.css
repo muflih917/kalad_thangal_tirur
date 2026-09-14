@@ -230,7 +230,7 @@
     }
 
     .carousel-frame {
-        width: 200px;
+        width: min(200px, calc(100vw - 96px));
         height: 280px;
     }
 }
