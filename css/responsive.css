@@ -168,11 +168,19 @@
         font-size: 1.3rem;
     }
 
+    .floating-whatsapp-button,
     .floating-call-button {
         right: 20px;
-        bottom: 85px;
         width: 48px;
         height: 48px;
+    }
+
+    .floating-whatsapp-button {
+        bottom: 143px;
+    }
+
+    .floating-call-button {
+        bottom: 85px;
     }
 
     .hero-subtitle {

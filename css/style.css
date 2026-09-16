@@ -1825,12 +1825,12 @@ img {
 }
 
 /* ============================================
-   FLOATING CALL BUTTON
+   FLOATING CONTACT BUTTONS
    ============================================ */
+.floating-whatsapp-button,
 .floating-call-button {
     position: fixed;
     right: 30px;
-    bottom: 95px;
     width: 52px;
     height: 52px;
     display: inline-flex;
@@ -1838,22 +1838,44 @@ img {
     justify-content: center;
     padding: 0;
     border-radius: 999px;
-    background: #218c56;
     color: var(--white);
-    font-weight: 600;
-    box-shadow: 0 8px 24px rgba(33, 140, 86, 0.3);
     z-index: 1000;
+}
+
+.floating-whatsapp-button {
+    bottom: 157px;
+    background: #25d366;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+    animation: whatsappButtonPulse 2.2s ease-in-out infinite;
+}
+
+.floating-call-button {
+    bottom: 95px;
+    background: #218c56;
+    box-shadow: 0 8px 24px rgba(33, 140, 86, 0.3);
     animation: callButtonPulse 2.2s ease-in-out infinite;
 }
 
+.floating-whatsapp-button i,
 .floating-call-button i {
     font-size: 1.15rem;
+}
+
+.floating-whatsapp-button:hover {
+    background: #1da851;
+    color: var(--white);
+    transform: translateY(-4px);
 }
 
 .floating-call-button:hover {
     background: #176d41;
     color: var(--white);
     transform: translateY(-4px);
+}
+
+@keyframes whatsappButtonPulse {
+    0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3); }
+    50% { box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55); }
 }
 
 @keyframes callButtonPulse {
