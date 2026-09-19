@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Kalad Thangal heartbeat heart</title>
+  <desc id="logo-description">A gold heartbeat heart mark inside a teal circle.</desc>
+  <circle cx="128" cy="128" r="124" fill="#0d5c63"/>
+  <path
+    d="M128 190 70.5 135.5C42 108.5 58.5 63 94.5 63c14.5 0 26.5 7.5 33.5 19.5C135 70.5 147 63 161.5 63c36 0 52.5 45.5 24 72.5L128 190Z"
+    fill="#e2c275"/>
+  <path
+    d="M56 123h30l12-24 18 48 18-36 12 24h54"
+    fill="none"
+    stroke="#0d5c63"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="10"/>
+</svg>

@@ -301,16 +301,8 @@ img {
 .logo-icon {
     width: 45px;
     height: 45px;
-    border-radius: 50%;
-    background: var(--primary-teal);
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    font-family: var(--font-primary);
+    flex: 0 0 auto;
+    display: block;
     transition: var(--transition-smooth);
 }
 
@@ -1681,16 +1673,6 @@ img {
 .footer-logo .logo-icon {
     width: 45px;
     height: 45px;
-    border-radius: 50%;
-    background: var(--primary-teal);
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    font-family: var(--font-primary);
 }
 
 .footer-logo .logo-name {
