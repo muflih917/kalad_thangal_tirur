@@ -200,6 +200,7 @@ img {
     font-family: var(--font-primary);
     margin-bottom: 20px;
     animation: pulse-icon 1.5s ease-in-out infinite;
+    object-fit: contain;
 }
 
 .preloader-text {
