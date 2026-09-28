@@ -126,7 +126,19 @@
     }
 
     /* Location */
+    .location-map.reveal-left,
+    .location-details.reveal-right {
+        opacity: 1;
+        transform: none;
+    }
+
     .map-wrapper {
+        height: 360px;
+        min-height: 300px;
+    }
+
+    .map-wrapper iframe {
+        height: 100%;
         min-height: 300px;
     }
 
