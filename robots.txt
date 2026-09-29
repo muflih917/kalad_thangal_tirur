@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kalad-thangal-tirur.vercel.app/sitemap.xml
+Sitemap: https://kaladthangaltirur.com/sitemap.xml
