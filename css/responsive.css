@@ -133,13 +133,56 @@
     }
 
     .map-wrapper {
-        height: 360px;
-        min-height: 300px;
+        display: none;
     }
 
-    .map-wrapper iframe {
-        height: 100%;
-        min-height: 300px;
+    .mobile-location-link {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-height: 112px;
+        padding: 20px;
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-lg);
+        background: var(--white);
+        box-shadow: var(--shadow-md);
+        color: var(--primary-dark);
+    }
+
+    .mobile-location-link > i:first-child {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        flex: 0 0 48px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--primary-teal);
+        color: var(--gold-light);
+        font-size: 1.25rem;
+    }
+
+    .mobile-location-link > span {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 5px;
+        min-width: 0;
+    }
+
+    .mobile-location-link strong {
+        font-size: 0.95rem;
+    }
+
+    .mobile-location-link > span > span {
+        color: var(--text-medium);
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+
+    .mobile-location-link > i:last-child {
+        color: var(--primary-teal);
+        flex: 0 0 auto;
     }
 
     /* Contact */
